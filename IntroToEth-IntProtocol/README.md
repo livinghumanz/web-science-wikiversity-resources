@@ -92,12 +92,12 @@ $$
 	- [ ] Communication must be encrypted.
 
 8. ### Ethernet makes sure that the data has arrived at the recipient
-	- [X] true
-	- [ ] false
+	- [ ] true
+	- [X] false
     > No ethernet has a CRC check sum such that the correctness of the data package can be verified but ethernet does not guarantee a frame to be delivered.
 
 9. ### How many header fields exist in ethernet?
-    - 3
+    - 3 -> Source MAC Address, Destination MAC Address and the Ethertype
 ``` text
  _______________________________________________________________________________________________
 |           |     __Mac Header (14 Bytes)__             |   (46-1500 bytes)     |               |
@@ -106,5 +106,74 @@ $$
 |(01010.. ) |                                           |                       |               |
 |___________|_______________Ethernet Type II Frame (64 - 1518 Bytes)____________|_______________|
 ```
+10. ### What is the maximum amount of data that is allowed to be transferred via an Ethernet Frame?
+    - [ ] 10 MBit
+	- [ ] 100 Mbit
+	- [X] 1500 Byte
+       > →	according to the protocol specification this is the amount of data that is allowed to be transferred
+	- [ ] 1518 Byte
 
+11. ### What does MAC in the context of Ethernet stand for?
+    - Media Access Control
+
+12. ### How is a frame called that is shorter than 64 Byte ?
+    - Runt frame
+
+13. ### What is the minimum amount of Data that has to be send over ethernet?
+    - 46 Bytes
+
+14. ### How much time passes by in a 100 Mbit/s ethernet device per clock cycle?
+	- [X] 10 nano seconds
+	- [X] 10^-8 seconds
+
+15. ### How much time passes by in 10 MBit/s ethernet device per clock cycle?
+	- [ ] 1 nano second
+	- [ ] 10 nano seconds
+	- [X] 100 nano seconds
+
+16. ### How far can a Bit travel approximately on a 10 Mbit/s ethernet device during one clock cycle?
+	- [ ] 100 meter
+    - [ ] 1 meter
+	- [ ] 3 meter
+	- [X] 30 meter
+$$
+\displaylines{
+10 X 10^6 bits/sec \\
+\text{Time per bits} = 10 X 10^{-6} => 10^{-7} sec (100ns)\\
+\text{distanceCovered = Speed X Time} => 300 * 10^6 * 10^{-7} => 30 meters\\
+}
+$$ 
+
+17. ### When an ethernet collision is discovered
+	- [X] The transmission of the current frame starts again from the beginning.
+	- [ ] The transmission of the current frame continues at the point where it stopped when the collision was detected.
+	- [ ] The network device waits until the other devices ask it to retransmit the data.
+	- [ ] The network starts retransmitting data right away.
+
+18. ### Who can detect a collision?
+	- [ ] all devices on the shared medium
+	- [ ] the recipients
+	- [X] the senders
+	- [ ] the senders and recipients
+
+19. ### How big is a slot time?
+	- [ ] Maximum ethernet frame size
+	- [X] Minimum ethernet frame size
+	- [X] 512 Clock cycles
+	- [ ] none of the above
+
+20. ### Almost all Internet traffic on the Link Layer consists of ethernet traffic
+	- false
+
+21. What is transfered during one ethernet clock cycle?
+	- 1 Bit
+
+22. ### Which holds true about the clock of ethernet devices
+	- [X] The clocks are synchronized during the transmission process.
+	- [X] Transmission speed is reciprocal to the interval length of one clock cycle
+	- [X] The clock frequency has an impact to the minimum length of an ethernet frame
+	- [X] The clock frequency has an impact to the maximum distance between two ethernet devices.
+
+
+	
         
