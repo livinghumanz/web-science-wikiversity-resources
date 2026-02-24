@@ -75,3 +75,36 @@ $$
     * >When wait number is 0 - increase the number of attempts by one. Computer tries to send data again starting the first bit.
     * >Sending the data is finished
 
+6. ### What general problems exist while making digital communication over a shared medium?
+    - [X] Participants have to have a way not to talk at the same time.
+	- [X] Participants have to talk the same language / protocol.
+	- [ ] The used protocol has to be an Internet standard
+	- [ ] One has to ensure that everyone gets the same amount of time to put data to the shared medium.
+	- [ ] Communication must be encrypted.
+	- [X] One has to make sure who sends a message and to whom it should be delivered.
+	- [ ] Messages have to be delivered correctly and be secured against data loss
+
+7. ### Which of the following statements are characteristic for communication over a shared medium?
+    - [ ] The smallest amount of information that can be transferred is a Bit.
+	- [X] Everyone who has access to the medium can receive all the data that is being put on the medium.
+	- [X] Several computers use the same medium to communicate with each other
+	- [ ] Collisions will occur if using a shared medium .
+	- [ ] Communication must be encrypted.
+
+8. ### Ethernet makes sure that the data has arrived at the recipient
+	- [X] true
+	- [ ] false
+    > No ethernet has a CRC check sum such that the correctness of the data package can be verified but ethernet does not guarantee a frame to be delivered.
+
+9. ### How many header fields exist in ethernet?
+    - 3
+``` text
+ _______________________________________________________________________________________________
+|           |     __Mac Header (14 Bytes)__             |   (46-1500 bytes)     |               |
+| Preamble  | [Destination Mac] [Source Mac] [Eth Type] |       Data            | CRC ($Bytes)  |
+| (8 Bytes) |  (6 Bytes)          (6 Bytes)   (2 Bytes) | [IP. ARP, Etc ...]    |               |
+|(01010.. ) |                                           |                       |               |
+|___________|_______________Ethernet Type II Frame (64 - 1518 Bytes)____________|_______________|
+```
+
+        
