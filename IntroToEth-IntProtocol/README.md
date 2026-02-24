@@ -174,6 +174,126 @@ $$
 	- [X] The clock frequency has an impact to the minimum length of an ethernet frame
 	- [X] The clock frequency has an impact to the maximum distance between two ethernet devices.
 
+23. ### What does the robustness principle say?
+    - Be conservative in what you do, be liberal in what you accept from others. (__Thats the original wording__)
+    - Be conservative in what you send, be liberal in what you accept (__This is a common used reformulation.__)
+
+24. ### Which core problems have been addressed while designing the Internet Protocol ?
+    - Enable hosts on two different networks to communicate with each other.
+    __→	the internet protocol was indeed design to enable communication over network boundaries.__
+    - Creating a tool for decentralized fail-proof communication between hosts.
+    __→	Yes this was a core requirement resulting from the fear of a nuclear war.__
+
+25. ### What are the advantages of segmenting networks?
+    - Package switching protocols on a shared medium will result in too many collisions if the network is not segmented. 
+    - Every network can use its own link layer protocol.
+
+26. ### what are the two parts of an IP address called ?
+    - host part and network part
+
+27. ### How many IPv4 addresses do exist ?
+    - about 4 billion
+
+28. ### What is achieved by introducing IP addresses?
+    - Uniquely identify each host on the internet
+    - introduce an address hierarchy 
+    - be able to identify the network a computer belongs to
+
+29. ### Why do we need to introduce the network part in IP ?
+    - This is done to reduce the amount of entries in a routing table. 
+
+30. How many networks of the following class exist in IPv4
+``` text
+    Class A                     Class B             
+    128 ( = 2^7)                16,384 ( = 2^14)                       
+
+    Class C                     PrivateNetworks
+    2,097,152 ( = 2^21 )        273 ( = 1 + 16 + 256 )
+```
+
+31. ### How many hosts can exist in the following class of IPv4 networks ?
+``` text
+    Class A                     Class B                 Class C
+    16,777,214 ( = 2^24-2)      65,534 ( = 2^16-2)      254 (= 2^8-2)
+```
+
+32. ### A network device from network 100.0.0.0 receives an IP package with the destination IP address 150.1.2.3. Which of the following is true?
+    - [X] The network prefix of the destination address is 150.1
+    - [X] The destination network is a class B network.
+
+33. ### Read the following article on Classless Inter-Domain Routing. Which are valid entries in a routing table?
+``` text
+    with CIDR 	    without CIDR
+        ✅              ✅             11.0.0.0
+		✅              ❌             12.3.1.1
+        ✅              ✅             192.162.2.0
+        ✅              ✅             192.162.0.0
+        ✅              ❌             14.31.0.0
+		✅              ❌             14.31.0.1
+```
+34. ### CIDR is backward compatible
+	- yes
+
+35. ### A network device from a class A network receives an IP package with the destination IP address in a class B network. Which of the following is true?
+    - If a route to the network of the destination adress exists the package will be routed.
+    - If no route to the destination network exists the package will be send to the default route.
+    - If the package cannot be routed there will be a forwarding error message send to the source.
+
+36. ### An IP package is sent from host A to Z. It is being routed via B, C and D. Now network D cannot forward the package. Which of the following is true?
+    - There will be an error send back to A. The route is not quite clear.
+
+37. ### You are using ethernet II with etherType 0x0800 with a maximum data payload to store a standard IPv4 package with IHL=5. How much data can you put inside one ethernet frame?
+    - 1480 Bytes
+```text
+    Yes the Ethernet frame can have a data payload of 1500 Bytes minus 20 Bytes of IP header.
+    Standard Ethernet has a Maximum Transmission Unit (MTU) of 1500 bytes.
+    -- Everything inside this 1500 bytes must include the IP Header and the Data.
+    -- (IHL = 5) Internet Header Length. It counts the number of 32-bit "words" in the header.
+    -- Calculations 5 X 32 = 160 bits = 20 bytes
+
+    ** Final Calculations: 
+        Total Eth MTU - IPv4 Header Size 
+        1500 bytes - 20 bytes = 1480 bytes.
+
+```
+
+38. ### An IP package has Bit number 49 set to 1 and has a data payload of 2000 Bytes. It now arrives at an Ethernet Network. What will happen?
+    - An error message will be send to the sender (specifying the maximum allowed data size)
+
+39. ### An IP package has Bit number 49 set to 0 and has a data payload of 2000 Bytes. It now arrives at an Ethernet Network. What will happen?
+    - The package is fragmented into two packages which both fit into the Ethernet frames of the network
+
+40. ### What is DSCP used for?
+    - prioritize traffic 
+    - increase the profit of internet service provider
+
+41. ### Which of the following becomes possible due to the use of TTL?
+    - discarding falsely routed packages
+
+42. ### Which of the IP header files will change while routing?
+    - [X] TTL
+    - [X] Total Length
+    - [ ] source IP address
+	- [ ] destination IP address
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+![alt text](assets/image.png)
+
 
 	
         
