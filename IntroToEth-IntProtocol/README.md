@@ -23,25 +23,35 @@ Speed of Light = $300 * 10^6$
 Cable length = 20 mtrs
 
 Network1 = 100MBps => 100 million Bits per second
+
 $$
+\displaylines{
 100 * 10^6 bits/sec \\ 
 \text{Time per bits} = 100 * 10^{-6} => 10^{-8} sec (10ns)\\
+}
 $$
+
 > for sending 1 bit ~ 10ns of time is taken 
 
 Network2 = 10MBps => 10 million Bits per second
+
 $$
+\displaylines{
 10 X 10^6 bits/sec \\
 \text{Time per bits} = 10 X 10^{-6} => 10^{-7} sec (100ns)\\
+}
 $$
+
 > for sending 1 bit ~ 100ns of time is taken 
 
 _distanceCovered = Speed X Time_
 
 $$
+\displaylines{
 \text{TimeTaken} = \frac{20 mtrs}{300 * 10^6} \\
-\text{TimeTaken} = 6.6667 * 10^{-8} => 66.67 *10^{-7}\\
+\text{TimeTaken} = 6.6667 * 10^{-8} => 66.67 *10^{-7} \\
 \text{TimeTaken} = 66.67 sec\\
+}
 $$
 
 4. ### Why does a collision occur in an Ethernet network?
