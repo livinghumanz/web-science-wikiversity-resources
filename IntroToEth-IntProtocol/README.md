@@ -277,21 +277,6 @@ $$
 	- [ ] destination IP address
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ![alt text](assets/image.png)
 
 
