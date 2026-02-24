@@ -19,30 +19,30 @@
 - #### Let us consider two cables of 20 meters each. One of them is in a 100MBps network while the other is in a 10MBps network. If you had to transfer data through each of them, how much time it would take for the first bit to arrive in each setting?
     _For your calculation you can assume that the speed of light takes the same value as in the videos. Round the answer to the nearest hundredth._
 
-    Speed of Light = $300 * 10^6$
-    Cable length = 20 mtrs
+Speed of Light = $300 * 10^6$
+Cable length = 20 mtrs
 
-    Network1 = 100MBps => 100 million Bits per second
-    $$
-    100 * 10^6 bits/sec \\ 
-    \text{Time per bits} = 100 * 10^{-6} => 10^{-8} sec (10Ns)\\
-    $$
-    > for sending 1 bit ~ 10Ns of time is taken 
+Network1 = 100MBps => 100 million Bits per second
+$$
+100 * 10^6 bits/sec \\ 
+\text{Time per bits} = 100 * 10^{-6} => 10^{-8} sec (10ns)\\
+$$
+> for sending 1 bit ~ 10ns of time is taken 
 
-    Network2 = 10MBps => 10 million Bits per second
-    $$
-    10 X 10^6 bits/sec \\
-    \text{Time per bits} = 10 X 10^{-6} => 10^{-7} sec (100Ns)\\
-    $$
-    > for sending 1 bit ~ 100Ns of time is taken 
+Network2 = 10MBps => 10 million Bits per second
+$$
+10 X 10^6 bits/sec \\
+\text{Time per bits} = 10 X 10^{-6} => 10^{-7} sec (100ns)\\
+$$
+> for sending 1 bit ~ 100ns of time is taken 
 
-    _distanceCovered = Speed X Time_
+_distanceCovered = Speed X Time_
 
-    $$
-    \text{TimeTaken} = \frac{20 mtrs}{300 * 10^6} \\
-    \text{TimeTaken} = 6.6667 * 10^{-8} => 66.67 *10^{-7}\\
-    \text{TimeTaken} = 66.67 sec\\
-    $$
+$$
+\text{TimeTaken} = \frac{20 mtrs}{300 * 10^6} \\
+\text{TimeTaken} = 6.6667 * 10^{-8} => 66.67 *10^{-7}\\
+\text{TimeTaken} = 66.67 sec\\
+$$
 
 4. ### Why does a collision occur in an Ethernet network?
     - [X] **Two or more devices attempt to transmit data simultaneously.**
@@ -64,3 +64,4 @@
     * >"Wait" is a loop. Each time we reduce it by one and wait for one time slot or 512 clock cycles; during this time Computer A avoids sending data.
     * >When wait number is 0 - increase the number of attempts by one. Computer tries to send data again starting the first bit.
     * >Sending the data is finished
+
