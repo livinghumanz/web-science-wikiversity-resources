@@ -49,7 +49,7 @@ _distanceCovered = Speed X Time_
 $$
 \displaylines{
 \text{TimeTaken} = \frac{20 mtrs}{300 * 10^6} \\
-\text{TimeTaken} = 6.6667 * 10^{-8} => 66.67 *10^{-7} \\
+\text{TimeTaken} = 6.6667 * 10^{-8} => 66.67 *10^{-9} \\
 \text{TimeTaken} = 66.67 sec\\
 }
 $$
